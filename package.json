@@ -1,0 +1,21 @@
+{
+    "name": "flipcart-clone",
+    "version": "0.0.1",
+    "description": "Flipkart homepage clone",
+    "main": "index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nalandenv/flipcart-clone.git"
+    },
+    "keywords": [
+        "flipkart",
+        "clone",
+        "ecommerce"
+    ],
+    "author": "Nikhil Nalande",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nalandenv/flipcart-clone/issues"
+    },
+    "homepage": "https://github.com/nalandenv/flipcart-clone#readme"
+}
