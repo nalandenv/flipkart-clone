@@ -1,9 +1,72 @@
-@mixin row{
-    display: flex;
-    flex-direction: row;
+@use "../abstracts/variables" as vars;
+@mixin row {
+  display: flex;
+  flex-direction: row;
 }
 
-@mixin column{
-    display: flex;
-    flex-direction: column;
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin dropdown {
+  position: absolute;
+  @include column;
+  cursor: pointer;
+  right: 50%;
+  transform: translateX(50%);
+  .triangle {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+    background-color: vars.$white;
+  }
+  .list-container {
+    width: 240px;
+    z-index: 2;
+    margin-top: -12px;
+    font-size: 14px;
+    color: vars.$primary-color;
+    font-weight: 500;
+    background-color: vars.$white;
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+    .head {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: vars.$secondary-bg-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    ul {
+      @include column;
+
+      li {
+        @include row;
+        padding: 16px 20px;
+        font-weight: 400;
+        justify-content: flex-start;
+        align-items: center;
+        border-top: 1px solid vars.$primary-bg-color;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+        span {
+          margin-left: 10px;
+          line-height: 18px;
+        }
+        &:hover {
+          background-color: vars.$list-hover;
+        }
+      }
+    }
+  }
 }

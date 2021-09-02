@@ -45,6 +45,7 @@ table {
 }
 
 header {
+  box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: row;
   position: Fixed;
@@ -138,10 +139,80 @@ header .nav .search-bar-container form .search-btn svg {
   width: 20px;
   height: 20px;
 }
+header .nav .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  right: 50%;
+  transform: translateX(50%);
+  display: none;
+}
+header .nav .dropdown .triangle {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+header .nav .dropdown .list-container {
+  width: 240px;
+  z-index: 2;
+  margin-top: -12px;
+  font-size: 14px;
+  color: #212121;
+  font-weight: 500;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+header .nav .dropdown .list-container .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .nav .dropdown .list-container .head a {
+  text-decoration: none;
+  color: #2874f0;
+}
+header .nav .dropdown .list-container .head a:hover {
+  text-decoration: underline;
+}
+header .nav .dropdown .list-container ul {
+  display: flex;
+  flex-direction: column;
+}
+header .nav .dropdown .list-container ul li {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 20px;
+  font-weight: 400;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid #f1f3f6;
+}
+header .nav .dropdown .list-container ul li svg {
+  width: 16px;
+  height: 16px;
+}
+header .nav .dropdown .list-container ul li span {
+  margin-left: 10px;
+  line-height: 18px;
+}
+header .nav .dropdown .list-container ul li:hover {
+  background-color: #fafafa;
+}
+header .nav .dropdown:hover {
+  display: block;
+}
 header .nav .btn-login {
   margin: 0 20px;
   min-width: 112px;
-  height: 36px;
+  position: relative;
+}
+header .nav .btn-login button {
+  height: 30px;
   padding: 5px 40px;
   font-weight: 700;
   cursor: pointer;
@@ -149,7 +220,11 @@ header .nav .btn-login {
   border: 1px solid #dbdbdb;
   color: #2874f0;
 }
+header .nav .btn-login:hover .dropdown {
+  display: block;
+}
 header .nav .more {
+  position: relative;
   display: flex;
   flex-direction: row;
   max-width: 150px;
@@ -165,6 +240,10 @@ header .nav .more p {
 header .nav .more span svg {
   transition: transform 0.1s;
   transform: rotate(-90deg);
+}
+header .nav .more:hover .dropdown {
+  display: block;
+  top: 43px;
 }
 header .nav .more:hover span svg {
   transform: rotate(-270deg);
