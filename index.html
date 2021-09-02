@@ -24,7 +24,7 @@
               <label class="floating-label" for="username"
                 >Enter Email/Phone Number</label
               >
-              <span id="login-erro" class="error hidden"></span>
+              <span id="login-error" class="error hidden"></span>
             </div>
             <div class="form-element">
               <input type="password" name="password" id="password" required />
@@ -37,11 +37,14 @@
               By continuing, you agree to Flipkart's
               <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.
             </p>
-            <button class="btn login-btn">Login</button>
+            <button id="login-btn" class="btn login-btn">Login</button>
             <div id="or">
               <span>OR</span>
             </div>
-            <button class="btn">Request OTP</button>
+            <button id="otp-btn" class="btn">Request OTP</button>
+            <button id="sign-in-btn" class="btn hidden">
+              Existing user? Log in
+            </button>
           </div>
           <a id="sign-up-link" href="">New to Flipkart? Create an account</a>
         </div>
