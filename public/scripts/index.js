@@ -1,10 +1,16 @@
-const login = document.querySelector("#login");
+const login = document.querySelector("#login button");
 const popUpForm = document.querySelector("#popUpForm");
 const formContainer = document.querySelector("#form-container");
-login.addEventListener("click", () => {
+const signUpRedirect = document.querySelector(".sign-up-redirect");
+login.addEventListener("click", (e) => {
+  e.preventDefault();
   popUpForm.classList.remove("hidden");
 });
-
+signUpRedirect.addEventListener("click", (e) => {
+  e.preventDefault();
+  popUpForm.classList.remove("hidden");
+  signUpRender();
+});
 popUpForm.addEventListener("click", (e) => {
   if (!formContainer.contains(e.target)) {
     popUpForm.classList.add("hidden");
@@ -25,15 +31,7 @@ const otpBtn = document.querySelector("#otp-btn");
 const signInBtn = document.querySelector("#sign-in-btn");
 signUp.addEventListener("click", (e) => {
   e.preventDefault();
-  or.classList.add("hidden");
-  heading.innerText = "Looks like you're new here!";
-  description.innerText = "Sign up with your mobile number to get started";
-  formElement[1].classList.add("hidden");
-  formElement[0].childNodes[3].innerText = "Enter Mobile Number";
-  loginBtn.innerText = "CONTINUE";
-  otpBtn.classList.add("hidden");
-  signUp.classList.add("hidden");
-  signInBtn.classList.remove("hidden");
+  signUpRender();
 });
 
 signInBtn.addEventListener("click", (e) => {
@@ -51,4 +49,16 @@ const resetForm = () => {
   otpBtn.classList.remove("hidden");
   signUp.classList.remove("hidden");
   signInBtn.classList.add("hidden");
+};
+
+const signUpRender = () => {
+  or.classList.add("hidden");
+  heading.innerText = "Looks like you're new here!";
+  description.innerText = "Sign up with your mobile number to get started";
+  formElement[1].classList.add("hidden");
+  formElement[0].childNodes[3].innerText = "Enter Mobile Number";
+  loginBtn.innerText = "CONTINUE";
+  otpBtn.classList.add("hidden");
+  signUp.classList.add("hidden");
+  signInBtn.classList.remove("hidden");
 };
