@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+.product-list {
+  padding-top: 56px;
+  font-family: vars.$font-family;
+  @include mixins.row;
+  justify-content: center;
+  background-color: vars.$white;
+  padding-bottom: 10px;
+  border-bottom: 1px solid vars.$alt-white;
+  .product-cat {
+    @include mixins.row;
+    justify-content: space-between;
+    max-width: 1258px;
+    width: 100%;
+    .category {
+      padding: 8px 12px;
+      text-align: center;
+      cursor: pointer;
+      img {
+        height: 64px;
+        width: 64px;
+        margin-bottom: 4px;
+      }
+      h5 {
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+        span {
+          padding-left: 5px;
+          svg {
+            transition: transform 0.1s;
+            transform: rotate(-90deg);
+            fill: inherit;
+          }
+        }
+      }
+      &:hover {
+        color: vars.$secondary-bg-color;
+        fill: vars.$secondary-bg-color;
+        svg {
+          transform: rotate(-270deg);
+        }
+      }
+    }
+    &:nth-child(1) {
+      padding-left: 22px;
+    }
+  }
+}

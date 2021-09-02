@@ -417,6 +417,57 @@ header .nav .cart p {
   padding-bottom: 15px;
 }
 
+.product-list {
+  padding-top: 56px;
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.product-list .product-cat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1258px;
+  width: 100%;
+}
+.product-list .product-cat .category {
+  padding: 8px 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.product-list .product-cat .category img {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 4px;
+}
+.product-list .product-cat .category h5 {
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+.product-list .product-cat .category h5 span {
+  padding-left: 5px;
+}
+.product-list .product-cat .category h5 span svg {
+  transition: transform 0.1s;
+  transform: rotate(-90deg);
+  fill: inherit;
+}
+.product-list .product-cat .category:hover {
+  color: #2874f0;
+  fill: #2874f0;
+}
+.product-list .product-cat .category:hover svg {
+  transform: rotate(-270deg);
+}
+.product-list .product-cat:nth-child(1) {
+  padding-left: 22px;
+}
+
 .hidden {
   display: none;
 }

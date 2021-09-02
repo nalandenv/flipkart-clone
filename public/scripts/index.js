@@ -78,7 +78,6 @@ loginBtn.addEventListener("click", (e) => {
       loginError.innerText = "Please enter valid Mobile number";
     } else {
       loginError.innerText = "Please enter valid Email ID/Mobile number";
-      console.log("signup");
     }
   }
 });
