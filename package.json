@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "description": "Flipkart homepage clone",
     "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch-sass": "sass --watch ./public/stylesheets/scss/main.scss ./public/stylesheets/css/main.css"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/nalandenv/flipcart-clone.git"
