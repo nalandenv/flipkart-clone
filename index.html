@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="./public/stylesheets/css/main.css" />
   </head>
   <body>
+    <div id="popUpForm" class="login-form hidden">
+      <div id="form-container">
+        <div class="left-sidebar">
+          <div>
+            <h1>Login</h1>
+            <p>Get access to your Orders, Wishlist and Recommendations</p>
+          </div>
+          <img src="./public/assets/images/login_bg_image.png" alt="" />
+        </div>
+        <div class="right-sidebar">
+          <div>
+            <div class="form-element">
+              <input type="text" name="username" id="username" required />
+              <label class="floating-label" for="username"
+                >Enter Email/Phone Number</label
+              >
+              <span id="login-erro" class="error hidden"></span>
+            </div>
+            <div class="form-element">
+              <input type="password" name="password" id="password" required />
+              <label class="floating-label" for="password"
+                >Enter Password</label
+              >
+              <a class="forgot" href="">Forgot?</a>
+            </div>
+            <p class="tnc">
+              By continuing, you agree to Flipkart's
+              <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.
+            </p>
+            <button class="btn login-btn">Login</button>
+            <div id="or">
+              <span>OR</span>
+            </div>
+            <button class="btn">Request OTP</button>
+          </div>
+          <a id="sign-up-link" href="">New to Flipkart? Create an account</a>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="empty"></div>
       <div class="nav">
@@ -47,7 +86,7 @@
           </form>
         </div>
         <!-- login button -->
-        <div class="btn-login">
+        <div id="login" class="btn-login">
           <button>Login</button>
           <div class="dropdown">
             <div class="triangle"></div>
@@ -283,5 +322,7 @@
       </div>
       <div class="empty"></div>
     </header>
+
+    <script src="./public/scripts/index.js"></script>
   </body>
 </html>
