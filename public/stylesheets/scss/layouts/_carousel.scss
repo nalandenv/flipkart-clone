@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as vars;
 body{
     background-color: #f0f0f0;
 }
@@ -15,7 +16,29 @@ body{
             width: 20%;
             float: left;
         }
+    }
+    .btn-car{
+        position: absolute;
+        top: 276px;
+        width: 47px;
+        height: 104px;
+        z-index: 1;
+        border: none;
+        background-color: vars.$white;
+        fill: black;
+        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 11%);
+    }
+    #lt-car{
+        left: 127px;
+        border-radius: 0 5px 5px 0;
     }    
+    #gt-car{
+        right: 127px;
+        border-radius: 5px 0 0 5px;
+        svg{
+            transform: rotate(180deg);
+        }
+    }
 }
 @keyframes slider {
     0% {

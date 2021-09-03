@@ -4,7 +4,7 @@
 .product-list {
   position: relative;
   z-index: 1;
-  padding-top: 56px;
+  padding-top: 60px;
   font-family: vars.$font-family;
   @include mixins.row;
   justify-content: center;

@@ -422,7 +422,7 @@ header .nav .cart p {
 .product-list {
   position: relative;
   z-index: 1;
-  padding-top: 56px;
+  padding-top: 60px;
   font-family: "Roboto", Arial, sans-serif;
   display: flex;
   flex-direction: row;
@@ -587,6 +587,28 @@ body {
 #carousel figure img {
   width: 20%;
   float: left;
+}
+#carousel .btn-car {
+  position: absolute;
+  top: 276px;
+  width: 47px;
+  height: 104px;
+  z-index: 1;
+  border: none;
+  background-color: #ffffff;
+  fill: black;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
+}
+#carousel #lt-car {
+  left: 127px;
+  border-radius: 0 5px 5px 0;
+}
+#carousel #gt-car {
+  right: 127px;
+  border-radius: 5px 0 0 5px;
+}
+#carousel #gt-car svg {
+  transform: rotate(180deg);
 }
 
 @keyframes slider {
