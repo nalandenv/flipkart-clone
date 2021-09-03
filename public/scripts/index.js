@@ -81,3 +81,108 @@ loginBtn.addEventListener("click", (e) => {
     }
   }
 });
+// auto generate list
+const products = {
+  "Fashion":["Men's Top Wear", "Men's Bottom Wear", "Women's Ethinic", "Women Western", "Men Footwear", "Women Footwear", "Watches and Accessories", "Bags, Suitcases & Luggage", "Kids", "Essentials", "Winter"],
+  "Electronics":["Audio", "Cameras & Accessories", "Computer Peripherals"],
+  "Home":["Audio", "Cameras & Accessories", "Computer Peripherals"],
+  "Appliances":["Audio", "Cameras & Accessories", "Computer Peripherals"],
+  "Beauty, Toys & More":["Audio", "Cameras & Accessories", "Computer Peripherals"]
+};
+const fashion = {
+  "Men's Top Wear": [
+    "All",
+    "Men's T-shirts",
+    "Men's Casual Shirts",
+    "Men's Formal Shirts","Men's Kurtas","Men's Ethnic Sets", "Men's Blazers", "Men's Raincoat", "Men's Windcheaters", "Men's Suit", "Men's Fabrics"
+  ],
+  "Men's Bottom Wear": [
+    "All",
+    "Men's Jeans",
+    "Men's Trackpants",
+    "Men's Trousers",
+  ],
+  "Women's Ethinic": ["All", "Women Sarees", "Women Kurtas & Kurtis"],
+};
+const electronics = {
+  "Audio": [
+    "All",
+    "Bluetooth Headphones",
+    "Men's Casual Shirts",
+    "Men's Formal Shirts","Men's Kurtas","Men's Ethnic Sets", "Men's Blazers", "Men's Raincoat", "Men's Windcheaters", "Men's Suit", "Men's Fabrics"
+  ],
+  "Cameras & Accessories": [
+    "All",
+    "Men's Jeans",
+    "Men's Trackpants",
+    "Men's Trousers",
+  ],
+  "Computer Peripherals": ["All", "Women Sarees", "Women Kurtas & Kurtis"],
+};
+
+const cat = document.querySelectorAll(".category");
+  for(let x of cat){
+    x.addEventListener("mouseover", ()=>{
+      const productKey = x.childNodes[3].childNodes[1].innerText;
+      const ul = document.createElement("ul");
+      const catDiv = x.childNodes[5].childNodes[3].childNodes[1];
+      catDiv.innerHTML = "";
+      products[productKey].forEach(element => {
+        const li = document.createElement("li");
+        li.innerHTML = `<span>${element}</span>`;
+        ul.append(li);
+      });
+      catDiv.append(ul);
+      switch(productKey){
+        case "Fashion":
+          arr = fashion;
+          break;
+          case "Electronics":
+            arr= electronics;
+            break;
+      }
+      const men = document.querySelectorAll(".cat ul li span");
+      for (let i of men) {
+        i.addEventListener("mouseover", () => {
+          const subCat = x.childNodes[5].childNodes[3].childNodes[3];
+          subCat.innerHTML = "";
+          const ul = document.createElement("ul");
+          const h4 = document.createElement("h4");
+          const key = i.childNodes[0].nodeValue;
+          h4.innerText = `MORE IN ${key.toUpperCase()}`;
+          subCat.append(h4);
+          for (let j of arr[key]) {
+            const li = document.createElement("li");
+            li.innerText = j;
+            ul.append(li);
+          }
+          subCat.append(ul);
+        });
+      }
+
+    })
+  }
+
+
+
+// subcat
+// const fash = document.querySelector("#fashion");
+//       const men = document.querySelectorAll(".cat ul li span");
+//       for (let i of men) {
+//         i.addEventListener("mouseover", () => {
+//           console.log()
+//           const subCat = document.querySelector(".sub-cat");
+//           subCat.innerHTML = "";
+//           const ul = document.createElement("ul");
+//           const h4 = document.createElement("h4");
+//           const key = i.childNodes[0].nodeValue;
+//           h4.innerText = `MORE IN ${key.toUpperCase()}`;
+//           subCat.append(h4);
+//           for (let j of fashion[key]) {
+//             const li = document.createElement("li");
+//             li.innerText = j;
+//             ul.append(li);
+//           }
+//           subCat.append(ul);
+//         });
+//       }

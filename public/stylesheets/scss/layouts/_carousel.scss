@@ -1,0 +1,11 @@
+.carousel-container{
+    width: 8320px;
+    display: flex;
+    .carousel{
+        max-width: 1664px;
+        width: 100%;
+        img{
+            width: 1664px;
+        }
+    }
+}

@@ -2,6 +2,8 @@
 @use "../abstracts/variables" as vars;
 
 .product-list {
+  position: relative;
+  z-index: 1;
   padding-top: 56px;
   font-family: vars.$font-family;
   @include mixins.row;
@@ -15,6 +17,7 @@
     max-width: 1258px;
     width: 100%;
     .category {
+      position: relative;
       padding: 8px 12px;
       text-align: center;
       cursor: pointer;
@@ -27,6 +30,7 @@
         font-size: 14px;
         font-weight: 500;
         align-items: center;
+        @include mixins.row;
         span {
           padding-left: 5px;
           svg {
@@ -36,11 +40,58 @@
           }
         }
       }
+      .dropdown {
+        @include mixins.dropdown;
+        .triangle {
+          z-index: 8;
+        }
+        .list-container {
+          @include mixins.row;
+          width: max-content;
+          ul {
+            li {
+              border-top: none;
+            }
+          }
+          .cat {
+            padding: 12px;
+            min-width: 240px;
+            box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+            ul {
+              li {
+                &:hover {
+                  font-weight: 500;
+                  color: vars.$secondary-bg-color;
+                }
+              }
+            }
+          }
+          .sub-cat {
+            padding: 12px;
+            min-width: 240px;
+            text-align: start;
+            ul {
+              li {
+                &:hover {
+                  font-weight: 500;
+                  color: vars.$secondary-bg-color;
+                }
+              }
+            }
+          }
+        }
+        display: none;
+      }
       &:hover {
         color: vars.$secondary-bg-color;
         fill: vars.$secondary-bg-color;
-        svg {
-          transform: rotate(-270deg);
+        span {
+          svg {
+            transform: rotate(-270deg);
+          }
+        }
+        .dropdown {
+          display: block;
         }
       }
     }
