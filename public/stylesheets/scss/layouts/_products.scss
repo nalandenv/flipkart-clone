@@ -1,0 +1,124 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+.products-container{
+    font-family: vars.$font-family;
+    margin: 0px auto;
+    min-width: 978px;
+    max-width: 1665px;
+    width: 100%;
+    padding: 8px;
+    @include mixins.row;
+    .products{
+        height: fit-content;
+        width: 100%;
+        box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+        .product-header{
+            @include mixins.row;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background-color: vars.$white;
+            .left-header{
+                .title{
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-weight: 500;
+                }
+                .sub-title{
+                    font-size: 14px;
+                    color: rgb(178, 178, 178);
+                }
+               
+            }
+            .right-header{
+                .vw-all{
+                    padding: 10px 20px;
+                    font-size: 13px;
+                    background-color: vars.$secondary-bg-color;
+                    border: none;
+                    border-radius: 2px;
+                    color: vars.$white;
+                    font-weight: 500;
+                    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+                }
+            }
+        }
+        .product-thumbnail{
+            
+            @include mixins.row;
+            background-color: vars.$white;
+            .thumbnail{
+                width: 195px;
+                box-sizing: border-box;
+                padding: 25px 15px;
+                text-align: center;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                cursor: pointer;
+                &:hover{
+                    .thumbnail-image-container{
+                        img{
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+                .thumbnail-image-container{
+                    height: 150px;
+                    width: 150px;
+                    margin: 0 auto;
+                    @include mixins.row;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .product-tag{
+                    font-weight: 500;
+                    margin-top: 15px;
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .offer-tag {
+                    padding-top: 8px;
+                        color: rgb(56, 142, 60);
+                        box-sizing: border-box;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .product-category-tag{
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    opacity: 0.6;
+                    padding-top: 7px;
+                }
+            }
+        }
+    }
+    .ad{
+        width: 220px;
+        background-color: vars.$white;
+        margin-left: 10px;
+        padding: 4px;
+        box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+        img{
+            width: inherit;
+        }
+    }
+    
+}
+.product-offer-banner{
+    max-width: 1665px;
+    width: 100%;
+    margin: 0 auto;
+    @include mixins.row;
+    flex: 1;
+    justify-content: space-between;
+    img{
+        width: 33%;
+        box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+    }
+}

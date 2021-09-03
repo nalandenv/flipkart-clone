@@ -6,6 +6,7 @@ body{
     overflow: hidden;
     max-width: 1664px;
     margin: 15px auto;
+    margin-bottom: 5px;
     figure{
         position: relative;
         width: 500%;
@@ -29,11 +30,11 @@ body{
         box-shadow: 0 1px 5px 0 rgb(0 0 0 / 11%);
     }
     #lt-car{
-        left: 127px;
+        left: 120px;
         border-radius: 0 5px 5px 0;
     }    
     #gt-car{
-        right: 127px;
+        right: 119px;
         border-radius: 5px 0 0 5px;
         svg{
             transform: rotate(180deg);

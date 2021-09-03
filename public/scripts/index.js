@@ -82,13 +82,6 @@ loginBtn.addEventListener("click", (e) => {
   }
 });
 // auto generate list
-const products = {
-  "Fashion":["Men's Top Wear", "Men's Bottom Wear", "Women's Ethinic", "Women Western", "Men Footwear", "Women Footwear", "Watches and Accessories", "Bags, Suitcases & Luggage", "Kids", "Essentials", "Winter"],
-  "Electronics":["Audio", "Cameras & Accessories", "Computer Peripherals"],
-  "Home":["Audio", "Cameras & Accessories", "Computer Peripherals"],
-  "Appliances":["Audio", "Cameras & Accessories", "Computer Peripherals"],
-  "Beauty, Toys & More":["Audio", "Cameras & Accessories", "Computer Peripherals"]
-};
 const fashion = {
   "Men's Top Wear": [
     "All",
@@ -124,16 +117,16 @@ const cat = document.querySelectorAll(".category");
   for(let x of cat){
     x.addEventListener("mouseover", ()=>{
       const productKey = x.childNodes[3].childNodes[1].innerText;
-      const ul = document.createElement("ul");
-      const catDiv = x.childNodes[5].childNodes[3].childNodes[1];
-      catDiv.innerHTML = "";
-      products[productKey].forEach(element => {
-        const li = document.createElement("li");
-        li.classList.add("hover");
-        li.innerHTML = `<span>${element}</span>`;
-        ul.append(li);
-      });
-      catDiv.append(ul);
+      // const ul = document.createElement("ul");
+      // const catDiv = x.childNodes[5].childNodes[3].childNodes[1];
+      // catDiv.innerHTML = "";
+      // products[productKey].forEach(element => {
+      //   const li = document.createElement("li");
+      //   li.innerHTML = `<span>${element}</span>`;
+      //   li.classList.add("hover");
+      //   ul.append(li);
+      // });
+      // catDiv.append(ul);
       switch(productKey){
         case "Fashion":
           arr = fashion;
@@ -154,8 +147,8 @@ const cat = document.querySelectorAll(".category");
           subCat.append(h4);
           for (let j of arr[key]) {
             const li = document.createElement("li");
-            li.classList.add("hover");
             li.innerText = j;
+            li.classList.add("hover");
             ul.append(li);
           }
           subCat.append(ul);

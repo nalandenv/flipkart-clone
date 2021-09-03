@@ -51,6 +51,10 @@
           ul {
             li {
               border-top: none;
+              &:hover{
+                font-weight: 500;
+                color: vars.$secondary-bg-color;
+            }
             }
           }
           .cat {
