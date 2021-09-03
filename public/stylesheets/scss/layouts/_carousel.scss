@@ -1,11 +1,48 @@
-.carousel-container{
-    width: 8320px;
-    display: flex;
-    .carousel{
-        max-width: 1664px;
-        width: 100%;
+body{
+    background-color: #f0f0f0;
+}
+#carousel{
+    overflow: hidden;
+    max-width: 1664px;
+    margin: 15px auto;
+    figure{
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 20s slider infinite;
         img{
-            width: 1664px;
+            width: 20%;
+            float: left;
         }
+    }    
+}
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
     }
 }

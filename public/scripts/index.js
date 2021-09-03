@@ -129,6 +129,7 @@ const cat = document.querySelectorAll(".category");
       catDiv.innerHTML = "";
       products[productKey].forEach(element => {
         const li = document.createElement("li");
+        li.classList.add("hover");
         li.innerHTML = `<span>${element}</span>`;
         ul.append(li);
       });
@@ -153,6 +154,7 @@ const cat = document.querySelectorAll(".category");
           subCat.append(h4);
           for (let j of arr[key]) {
             const li = document.createElement("li");
+            li.classList.add("hover");
             li.innerText = j;
             ul.append(li);
           }

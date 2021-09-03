@@ -57,26 +57,16 @@
             padding: 12px;
             min-width: 240px;
             box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
-            ul {
-              li {
-                &:hover {
-                  font-weight: 500;
-                  color: vars.$secondary-bg-color;
-                }
-              }
-            }
           }
           .sub-cat {
             padding: 12px;
             min-width: 240px;
             text-align: start;
-            ul {
-              li {
-                &:hover {
-                  font-weight: 500;
-                  color: vars.$secondary-bg-color;
-                }
-              }
+          }
+          .hover{
+            &:hover{
+                font-weight: 500;
+                color: vars.$secondary-bg-color;
             }
           }
         }
