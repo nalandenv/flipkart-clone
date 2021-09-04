@@ -96,19 +96,19 @@ const fashion = {
   "Winter": ["All", "Men's Jackets", "Men's Sweatshirts", "Men's Sweaters", "Men's Thermals", "Women's Jackets", "Women's Sweatshirts", "Women's Sweaters & Cardigans", "Womne's Shrugs", "Kids SweatShirts", "Women Kurtas", "Kids Jackets"]
 };
 const electronics = {
-  "Audio": [
-    "All",
-    "Bluetooth Headphones",
-    "Men's Casual Shirts",
-    "Men's Formal Shirts","Men's Kurtas","Men's Ethnic Sets", "Men's Blazers", "Men's Raincoat", "Men's Windcheaters", "Men's Suit", "Men's Fabrics"
-  ],
-  "Cameras & Accessories": [
-    "All",
-    "Men's Jeans",
-    "Men's Trackpants",
-    "Men's Trousers",
-  ],
-  "Computer Peripherals": ["All", "Women Sarees", "Women Kurtas & Kurtis"],
+  "Audio": ["All", "Bluetooth Headphones", "Wired Headphones", "True Wireless Earbuds", "Bluetooth Speakers", "Soundbars", "Home Theatres", "TV Streaming Device", "Remote Control", "DTH Set top box", "Headphones Pouch & Case Covers"],
+  "Cameras & Accessories": ["All", "DSLR & Mirrorless", "Sports & action", "Point & Shoot", "Instant Cameras", "Camcorders", "Camera Tripod", "Camera Lenses", "Drone", "Flashes", "Gimbals", "Binoculars", "Other Camera Accessories"],
+  "Computer Peripherals": ["All", "Printers", "Monitors", "Projectors", "Protable Projectors", "Toners", "Ink Cartidges", "Ink Bottles", "Receipt Printers", "Lamination Machines", "Barcode Scanners", "Currency Detectors"],
+  "Gaming": ["All", "Gaming Consoles", "Gaming Mouse", "Gaming Keyboards", "Gamepads", "Games", "Accessory Kits", "Gaming Accessories Combo", "Gaming Mousepads", "Membership Cards", "Controllers", "Other Gaming Accessories", "Gaming Components"],
+  "Health & Personal Care": ["All", "Trimmers", "Shavers", "Hair Straighteners", "Hair Dryers", "Epilators", "Glucometers And Accessories", "Blood Pressure Monitors", "Digital Thermometers", "Weighing Scales", "Massagers", "Nebulizers", "Vaporizers"],
+  "Laptop Accessories": ["All", "Mouse", "Laptop Keyboards", "Router", "Data Cards", "UPS", "USB Gadgets", "Security Software", "Laptop battery", "Laptop Adapter", "Wireless USB Adapter", "Processor", "Other Accessories"],
+  "Laptop and Desktop": ["All", "Laptops", "Gaming Laptops", "Desktop PCs", "All In One PCs", "Mini PCs", "Tower PCs", "PC Finder", "GST Invoice on Laptops", "Laptop Buying Guide"],
+  "Mobile Accessory": ["All", "Plain Cases", "Designer Cases", "Screen Guards", "Camera Lens protectors", "Tablet Accessories", "Mobile Cable", "Mobile Charging Mobile Charger", "Mobile Pouches", "Mobile Flash", "Mobile Holder", "Mobile USB Gadget", "Mobile Accessories Combos"],
+  "Powerbank": ["All", "Powerbank"],
+  "Smart Home Automation": ["All", "Smart Assistants", "Smart Lights", "Smart Cameras", "Smart Switches", "Smart Door Locks", "Sensors & Alarms"],
+  "Smart Wearables": ["All", "Smart Watches", "Smart Bands", "Smart Glasses"],
+  "Storage": ["All", "Mobile Memory Card", "Computer Storage Pendrive", "Mobile Storage Pendrive", "External Hard Drive", "Internal Hard Drive"],
+  "Tablets": ["All", "Tablets With Call Facility", "Tablets Without Call Facility"]
 };
 
 const cat = document.querySelectorAll(".cat-list");
