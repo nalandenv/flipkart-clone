@@ -65,12 +65,12 @@
           }
           .cat {
             padding: 12px;
-            min-width: 240px;
+            width: 240px;
             box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
           }
           .sub-cat {
             padding: 12px;
-            min-width: 240px;
+            width: 240px;
             text-align: start;
             .sub-cat-heading{
               color: vars.$footer-text-color;

@@ -135,6 +135,19 @@ const appliances = {
     "Buying Guides": ["All", "Televisions", "Washing Machines", "Refrigerators", "Air Conditioners", "Water Purifiers", "Air Purifiers", "Chimneys", "Water Geysers"],
     "Flipkart Benefits": ["All", "Exchange Offers", "No Cost EMI", "Extended Warranty", "Complete Appliance Protection", "Save More on Business Purchase", "Appliance Service Plan"]
 }
+const others = {
+    "Beauty & Personal Care": ["View All", "Bath & Oral Care", "Personal Hygiene", "Eye Makeup", "Face Makeup", "Lip Makeup", "Hair Care", "Bath Essentials", "Women's Personal Hygiene", "Body & Skin Care", "Luxury", "Top Brand Deals"],
+    "Men's Grooming": ["View All", "Face Washes", "Beard Oils", "Hair Styling", "Shaving Essentials", "Aftershave", "Face Creams & Face Packs", "Soaps & Bodywashes", "Men's Grooming Combos", "Sexual Wellness"],
+    "Food & Drinks": ["View All", "Beverages", "Nuts & Dry Fruits", "Cooking Essentials", "Breakfast Items", "Snacks Corner", "Jams, spreads & Honey", "Ready to Cook & Eat", "Chocolates", "Baking Essentials", "Sweets Store", "Top Brand Deals"],
+    "Nutrition & Health Care": ["View All", "Masks", "Ayurvedic Supplements", "Health Drinks", "Vitamin Supplements", "Protein Supplements", "Women's Safety", "Home Medicines", "Home Medical Supplies", "Healthcare Comos", "Professional Medical Supplies", "Top Brand Deals"],
+    "Baby Care": ["View All", "Baby Diapers", "Baby Wipes", "Baby Bath & Grooming", "Baby Gift Sets & Combo", "Baby Medical & Health Care", "Nursing & Breast Feeding", "Feeding Bottles, Utensils & Accessories", "Baby Food", "Baby Bedding", "Baby Gear", "Top Brand Deals"],
+    "Toys & School Supplies": ["View All", "Remote Control Toys", "Soft Toys", "Puzzles", "Board Games", "Learning & Educational Toys", "Cars & Die-Cast Vehicles", "Baby Toys", "Gifting Toys", "School Bags & Backpacks", "School Supplies", "Top Brand Deals"],
+    "Sports & Fitness": ["View All", "Badminton", "Cricket", "Cycling", "Football", "Fitness Equipment", "Supports", "Shakers & Sippers", "Gym Gloves", "Dumbbells", "Yoga", "Top Branded Deals"],
+    "Books & Music": ["View All", "Test prep", "Academics", "Literature & Fiction", "Non Fiction", "Young Readers", "E-Learning", "Indian Languages", "Acoustic Guitars", "Musical Keyboards", "Microphones", "Stage Equipment & Accessories"],
+    "Stationary & Office Supplies": ["View All", "Pens & Gift Sets", "Notebooks & Diaries", "Art Supplies", "Calculators", "Keychains", "Card Holders", "Desk Organizers", "Office Supplies", "Office Equipments", "Party Supplies", "Top Brand Deals"],
+    "Auto Accessories": ["View All", "Bike Essentials", "Car & Bike Covers", "Car Air Freshener", "Car Bluetooth Device", "Car Lubricant", "Car Vacuum Cleaner", "Car Media Player", "Helmet", "Vehicle Washing & Cleaning Products", "Tyres", "Top Brand Deals"],
+    "Safety & Hygiene Essentials": ["View All", "Masks", "Sanitizers", "Hand Wash", "Gloves", "PPE Kits", "Face Shields", "UV Sterilizer Box", "Safety Goggles", "Vitamins for Immunity"]
+}
 const cat = document.querySelectorAll(".cat-list");
   for(let x of cat){
     x.addEventListener("mouseover", ()=>{
@@ -162,6 +175,9 @@ const cat = document.querySelectorAll(".cat-list");
           case "Appliances":
               arr = appliances;
               break;
+          case "Beauty, Toys & More":
+            arr = others;
+            break;
       }
       const men = document.querySelectorAll(".cat ul li span");
       for (let i of men) {

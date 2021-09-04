@@ -552,12 +552,12 @@ header .nav .cart p {
 }
 .product-list .product-cat .category .dropdown .list-container .cat {
   padding: 12px;
-  min-width: 240px;
+  width: 240px;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .product-list .product-cat .category .dropdown .list-container .sub-cat {
   padding: 12px;
-  min-width: 240px;
+  width: 240px;
   text-align: start;
 }
 .product-list .product-cat .category .dropdown .list-container .sub-cat .sub-cat-heading {
