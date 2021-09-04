@@ -110,7 +110,19 @@ const electronics = {
   "Storage": ["All", "Mobile Memory Card", "Computer Storage Pendrive", "Mobile Storage Pendrive", "External Hard Drive", "Internal Hard Drive"],
   "Tablets": ["All", "Tablets With Call Facility", "Tablets Without Call Facility"]
 };
-
+const home = {
+    "Home Furnishings": ["All", "Bed Linens", "Bedsheets", "Blankets", "Curtains & Accessories", "Bath linen", "Floor Covering", "Covers & Protection", "Cushions & Pillows", "Kitchen Linen Sets", "Table Linen Sets", "Sofa & Curtain Fabrics", "Branded Collections"],
+    "Living Room": ["All", "Sofas Sets & Sectionals", "TV Units", "Dining Sets", "Coffee Tables", "Sofa Beds", "Recliners", "Living Room Chairs", "Cabinet & Drawers", "Bookshelves", "Shoe Racks", "Office Tables", "Office Chairs"],
+    "Kitchen & Dining": ["All", "Cookware", "Lunchboxes, Bottles & Flasks", "Knives, Choppers & Cutters", "Gas Stoves & Accessories", "Kitchen Tools", "Tableware & Dinnerware", "Containers & Kitchen Storage", "Barware", "Bakeware", "Handjuicers & Grinders", "Disposable Supplies", "Outdoor Cooking"],
+    "Bedroom room": ["All", "Mattresses", "Beds", "Wardrobes", "Side Tables", "TV Units", "Office Tables", "Office Chairs", "Bookshelves", "Bar Cabinets", "Bar Stools", "Rockign Chairs", " Benchers"],
+    "Home Decor": ["All", "Lightings", "Stickers & Wallpapers", "Paintings & Posters", "Clocks", "Showpieces & Decoratives", "Wall Decor", "Flowers & Vases", "Home Fragrances", "Windchimes & Dream Catcher", "Photo Frames & Albums", "Diyas, Candles & Holders", "Festive & Gifting"],
+    "Tools & Utility": ["All", "Hand Tools", "Power Tools", "Measuring Tools", "Home Storage & Organizers", "Umbrellas", "Appliance Trolley & Stands", "Cloth Dryer Stand", "Appliance Filter & Cartridges", "Laundary Organization", "Lock & Security", "Fire & Personal Safety", "Paint Supplies & Equipments"],
+    "Lightings & Electricals": ["All", "Bulbs", "Emergency Lights", "Torches", "Tubelights", "Extenstion Cords", "Outdoor Lamps", "Batteries", "Electrical Wire", "Electrical Socket", "Electric Doorbell", "Solar Lights, Panels & Batteries", "Electrical Hardware"],
+    "Space Saving": ["All", "Portable Laptop Tables", "Collapsible Wardrobes", "Bean Bags & Covers", "Shoe Racks", "Cabinet Drawers", "Inflatable Sofas", "Hammock Swings", "Home Temples", "Bookshelves", "TV Mounts", "Kitchen Trolley", "Kitchen Cabinet"],
+    "Cleaning & Bath": ["All", "Mops", "Cleaning Supplies", "House Hold supplies", "Air Freshners", "Cleaning Gloves", "Liquid Detergents", "Taps & Faucet", "Toothbrush holder", "Bathroom Rack & Shelves", "Shower Heads","Bath & Kitchet Fittings", "Bathroom Accessories"],
+    "Kids Furniture": ["All", "Bunk Beds", "Kids'Seating", "Kids' Table", "Kids' Chairs", "Kids' Sofas", "Bookshelves", "Chest of Drawers", "Cupboards", "Shoe Racks", "Kids' Bean Bags", "Portable Pool", "Sofa Beds"],
+    "Pet & Gardening": ["All", "Plant Seeds", "Pots & Planters", "Plant & Planters", "Garden Tool Set", "Watering Equipments", "Dog Essentials", "Cat Essentials", "Fish & Aquatic", "Pet Grooming & Hygiene", "Pet Toys", "Pet Health & Safety"]
+}
 const cat = document.querySelectorAll(".cat-list");
   for(let x of cat){
     x.addEventListener("mouseover", ()=>{
@@ -132,6 +144,9 @@ const cat = document.querySelectorAll(".cat-list");
           case "Electronics":
             arr= electronics;
             break;
+          case "Home":
+              arr = home;
+              break;
       }
       const men = document.querySelectorAll(".cat ul li span");
       for (let i of men) {
