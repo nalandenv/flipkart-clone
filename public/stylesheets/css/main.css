@@ -471,6 +471,7 @@ header .nav .cart p {
   cursor: pointer;
   right: 50%;
   transform: translateX(50%);
+  margin-top: 5px;
   display: none;
 }
 .product-list .product-cat .category .dropdown .triangle {
@@ -530,7 +531,8 @@ header .nav .cart p {
   background-color: #fafafa;
 }
 .product-list .product-cat .category .dropdown .triangle {
-  z-index: 8;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 48%;
 }
 .product-list .product-cat .category .dropdown .list-container {
   display: flex;

@@ -42,8 +42,10 @@
       }
       .dropdown {
         @include mixins.dropdown;
-        .triangle {
-          z-index: 8;
+        margin-top: 5px;
+        .triangle{
+          box-shadow: 0 4px 16px 0 rgb(0 0 0 / 20%);
+          margin-left: 48%;
         }
         .list-container {
           @include mixins.row;
