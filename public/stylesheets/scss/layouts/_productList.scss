@@ -50,11 +50,17 @@
           width: max-content;
           ul {
             li {
+              padding: 12px;
               border-top: none;
+              line-height: 1.4;
+              span{
+                margin: 0;
+                line-height: 1.4;
+              }
               &:hover{
                 font-weight: 500;
                 color: vars.$secondary-bg-color;
-            }
+              }
             }
           }
           .cat {

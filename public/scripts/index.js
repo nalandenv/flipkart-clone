@@ -123,6 +123,18 @@ const home = {
     "Kids Furniture": ["All", "Bunk Beds", "Kids'Seating", "Kids' Table", "Kids' Chairs", "Kids' Sofas", "Bookshelves", "Chest of Drawers", "Cupboards", "Shoe Racks", "Kids' Bean Bags", "Portable Pool", "Sofa Beds"],
     "Pet & Gardening": ["All", "Plant Seeds", "Pots & Planters", "Plant & Planters", "Garden Tool Set", "Watering Equipments", "Dog Essentials", "Cat Essentials", "Fish & Aquatic", "Pet Grooming & Hygiene", "Pet Toys", "Pet Health & Safety"]
 }
+const appliances = {
+    "Televisions": ["All", "New Launches", "Top Sellers", "24-32 Inch", "40-43 Inch", "50-55 Inch", "Big Screen TVs", "Smart TVs", "4K UHD TVs", "The Frame", "OLED TVs", "QLED TVs", "Nanocell TVs"],
+    "Washing Machines": ["All", "New Launches", "Fully Automatic Front Load", "Semi Automatic Top Load", "Fully Automatic Top Load", "Washer Dryer"," Washer Only", "Dishwasher", "Energy Efficient", "#JustHere", "Bestsellers", "Top Brands"],
+    "Air Conditioners": ["All", "New Launches", "Inverter ACs", "Split ACs", "Window ACs", "#justHere", "Energy Efficient ACs", "5 Star ACs", "Best Sellers", "1 Ton ACs", "1.5 Ton ACs", "Wi-fi Enabled", "Top Brands"],
+    "Refrigerators": ["All", "New Launches", "Single Door", "Double Door", "Triple Door", "Side by Side", "4 Door", "Mini Regrigerators", "Convertible", "Bottom Mount", "Energy-Efficient"],
+    "Kitchen Appliances": ["All", "New Launches", "Microwave Ovens", "Oven Toaster Grills (OTG)", "Juicer/Mixer/Grinder", "Electric Kettle", "Induction Cooktops", "Chimneys", "Coffee Makers", "Sandwich Makers", "Pop Up Toaster", "Electric Cookers", "Wet Grinders"],
+    "Home Appliances": ["All", "New Launches", "Irons", "Water Purifiers", "Inverters", "Vacuum Cleaners", "Sewing Machines", "Voltage Stabilizers", "Air Purifiers", "Landline Phones"],
+    "Seasonal Appliances": ["All", "New Launches", "Air Coolers", "Fans", "Water Geysers", "Immersion Rods", "Room Heater"],
+    "Premium Appliances": ["All", "Premium Televisions", "Premium Washing Machines", "Side By Side Refrigerators", "Vacuum Cleaners", "Dishwashers", "Premium ACs", "Designer Fans", "Washer Dryers", "Four Door Refrigerators"],
+    "Buying Guides": ["All", "Televisions", "Washing Machines", "Refrigerators", "Air Conditioners", "Water Purifiers", "Air Purifiers", "Chimneys", "Water Geysers"],
+    "Flipkart Benefits": ["All", "Exchange Offers", "No Cost EMI", "Extended Warranty", "Complete Appliance Protection", "Save More on Business Purchase", "Appliance Service Plan"]
+}
 const cat = document.querySelectorAll(".cat-list");
   for(let x of cat){
     x.addEventListener("mouseover", ()=>{
@@ -146,6 +158,9 @@ const cat = document.querySelectorAll(".cat-list");
             break;
           case "Home":
               arr = home;
+              break;
+          case "Appliances":
+              arr = appliances;
               break;
       }
       const men = document.querySelectorAll(".cat ul li span");

@@ -538,7 +538,13 @@ header .nav .cart p {
   width: max-content;
 }
 .product-list .product-cat .category .dropdown .list-container ul li {
+  padding: 12px;
   border-top: none;
+  line-height: 1.4;
+}
+.product-list .product-cat .category .dropdown .list-container ul li span {
+  margin: 0;
+  line-height: 1.4;
 }
 .product-list .product-cat .category .dropdown .list-container ul li:hover {
   font-weight: 500;
@@ -617,6 +623,7 @@ body {
 #carousel #gt-car {
   right: 0;
   border-radius: 5px 0 0 5px;
+  z-index: 0;
 }
 #carousel #gt-car svg {
   transform: rotate(180deg);
