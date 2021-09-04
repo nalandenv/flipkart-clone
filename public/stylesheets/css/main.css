@@ -581,6 +581,7 @@ body {
   max-width: 1664px;
   margin: 15px auto;
   margin-bottom: 5px;
+  position: relative;
 }
 #carousel figure {
   position: relative;
@@ -595,7 +596,8 @@ body {
 }
 #carousel .btn-car {
   position: absolute;
-  top: 276px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 47px;
   height: 104px;
   z-index: 1;
@@ -605,11 +607,11 @@ body {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.11);
 }
 #carousel #lt-car {
-  left: 120px;
+  left: 0;
   border-radius: 0 5px 5px 0;
 }
 #carousel #gt-car {
-  right: 119px;
+  right: 0;
   border-radius: 5px 0 0 5px;
 }
 #carousel #gt-car svg {
@@ -760,6 +762,138 @@ body {
 .product-offer-banner img {
   width: 33%;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 24px;
+  min-width: 978px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+footer a {
+  text-decoration: none;
+  color: #565656;
+}
+footer .footer-info {
+  width: 100%;
+}
+footer .footer-info .top-stories {
+  padding: 25px;
+  color: #848484;
+}
+footer .footer-info .top-stories h4 {
+  margin-top: 14px;
+  padding: 14px 0;
+  font-weight: 500;
+}
+footer .footer-info .top-stories h4 a {
+  margin-left: 3px;
+}
+footer .footer-info .top-stories .link-container {
+  margin: 3px 0;
+  line-height: 1.4;
+}
+footer .footer-info .top-stories .link-container .link-title {
+  margin-right: 3px;
+  text-transform: uppercase;
+  color: #848484;
+}
+footer .footer-info .top-stories .link-container .footer-link-content {
+  padding: 0 5px;
+  font-size: 12px;
+  border-right: 1px solid #333;
+}
+footer .footer-info .flipkart-info {
+  padding: 0 25px;
+  color: #848484;
+}
+footer .footer-info .flipkart-info .text-content {
+  margin: 30px 0 13px;
+  line-height: 16px;
+  font-size: 11px;
+}
+footer .footer-info .flipkart-info .text-content h1, footer .footer-info .flipkart-info .text-content h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+footer .footer-info .flipkart-info .text-content h2 {
+  font-size: 14px;
+}
+footer .footer-main {
+  width: 100%;
+  background-color: #172337;
+}
+footer .footer-main .f-top {
+  margin-left: 65px;
+  width: 90% !important;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+footer .footer-main .f-top .ft-section {
+  flex: 2;
+  height: fit-content;
+}
+footer .footer-main .f-top .ft-section .ft-section-title {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+footer .footer-main .f-top .ft-section .ft-section-link {
+  line-height: 2;
+  font-weight: 500;
+  color: #ffffff;
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+}
+footer .footer-main .f-top .ft-section .ft-section-link:hover {
+  text-decoration: underline;
+}
+footer .footer-main .f-top .ft-section p {
+  font-size: 12px;
+  flex-wrap: wrap;
+  color: #ffffff;
+  line-height: 17px;
+}
+footer .footer-main .f-top .ft-section p a {
+  color: #2874f0;
+}
+footer .footer-main .f-top .address {
+  padding: 0 25px;
+}
+footer .footer-main .f-bottom {
+  border-top: 1px solid #454d5e;
+  padding: 25px 0;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer .footer-main .f-bottom .fb-link {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-main .f-bottom .fb-link svg {
+  height: 15px;
+}
+footer .footer-main .f-bottom .fb-link a {
+  margin-left: 5px;
+  color: #ffffff;
+}
+footer .footer-main .f-bottom .fb-link p {
+  color: #ffffff;
+}
+footer .footer-main .f-bottom svg:last-child {
+  height: 20px;
 }
 
 .hidden {

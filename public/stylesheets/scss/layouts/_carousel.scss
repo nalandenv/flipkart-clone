@@ -7,6 +7,7 @@ body{
     max-width: 1664px;
     margin: 15px auto;
     margin-bottom: 5px;
+    position: relative;
     figure{
         position: relative;
         width: 500%;
@@ -20,7 +21,8 @@ body{
     }
     .btn-car{
         position: absolute;
-        top: 276px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 47px;
         height: 104px;
         z-index: 1;
@@ -30,11 +32,11 @@ body{
         box-shadow: 0 1px 5px 0 rgb(0 0 0 / 11%);
     }
     #lt-car{
-        left: 120px;
+        left: 0;
         border-radius: 0 5px 5px 0;
     }    
     #gt-car{
-        right: 119px;
+        right: 0;
         border-radius: 5px 0 0 5px;
         svg{
             transform: rotate(180deg);
