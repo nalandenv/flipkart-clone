@@ -66,6 +66,10 @@
             padding: 12px;
             min-width: 240px;
             text-align: start;
+            .sub-cat-heading{
+              color: vars.$footer-text-color;
+              font-size: 13px;
+            }
           }
           .hover{
             &:hover{

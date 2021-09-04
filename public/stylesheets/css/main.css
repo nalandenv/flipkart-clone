@@ -554,6 +554,10 @@ header .nav .cart p {
   min-width: 240px;
   text-align: start;
 }
+.product-list .product-cat .category .dropdown .list-container .sub-cat .sub-cat-heading {
+  color: #848484;
+  font-size: 13px;
+}
 .product-list .product-cat .category .dropdown .list-container .hover:hover {
   font-weight: 500;
   color: #2874f0;

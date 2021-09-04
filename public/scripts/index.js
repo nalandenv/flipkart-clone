@@ -83,19 +83,17 @@ loginBtn.addEventListener("click", (e) => {
 });
 // auto generate list
 const fashion = {
-  "Men's Top Wear": [
-    "All",
-    "Men's T-shirts",
-    "Men's Casual Shirts",
-    "Men's Formal Shirts","Men's Kurtas","Men's Ethnic Sets", "Men's Blazers", "Men's Raincoat", "Men's Windcheaters", "Men's Suit", "Men's Fabrics"
-  ],
-  "Men's Bottom Wear": [
-    "All",
-    "Men's Jeans",
-    "Men's Trackpants",
-    "Men's Trousers",
-  ],
-  "Women's Ethinic": ["All", "Women Sarees", "Women Kurtas & Kurtis"],
+  "Men's Top Wear": ["All","Men's T-shirts","Men's Casual Shirts","Men's Formal Shirts","Men's Kurtas","Men's Ethnic Sets", "Men's Blazers", "Men's Raincoat", "Men's Windcheaters", "Men's Suit", "Men's Fabrics"],
+  "Men's Bottom Wear": ["All","Men's Jeans","Men's Trousers","Men's Trackpants", "Men's Shorts", "Men's Cargos", "Men's Threefourths", "Men's Pyjamas & Loungepants", "Men's Dhoti", "Men's Ethnic Pyjama"],
+  "Women Ethnic": ["All", "Women Sarees", "Women Kurtas & Kurtis","Women Kurta Sets & Salwar Suits", "Ethnic Dresses", "Women Dress Material", "Women Gowns", "Women Lehenga Cholis", "Women Leggings & Patialas", "Women Palazzons & Shararas", "Women Blouse", "Women Dupatta"],
+  "Women Western": ["All", "Women Tops", "Women Dresses", "Women T-shirts & Polo T-shirts", "Women Jeans", "Women Nighties & Night Dresses", "Women Nightsuit", "Women Track Pants", "Women Trousers", "Women  Jumpsuits", "Women Shapewear", "Women Sports Bra"],
+  "Men Footwear": ["All", "Men's Sports Shoes", "Men's Casual Shoes", "Men's Sandals & Floaters", "Men's Slippers & Flip Flops", "Men's Formal Shoes", "Men's Ethnic Shoes", "Active Footwear", "Combo Footwear", "Shoe Care"],
+  "Women Footwear": ["All", "Women Flats", "Women Heels", "Women Wedges", "Women Slipper Flip Flops", "Women Casual Shoes", "Women Sports Shoes", "Wome Ballerinas", "Women Ethnic Shoes", "Women Sneakers", "Women Walking Shoes", "Women Boots"],
+  "Watches and Accessories": ["Men & Women Watches", "Men & Women Sunglasses", "Wallets", "Men & Women Belts", "Women Fashion Jewellery", "Men Fashion Jewellery", "Precious Jewellery", "Precious Coins & Bars", "Precious Articles", "Frames & Contact Lenses", "Kids Accessories"],
+  "Bags, Suitcases & Luggage": ["All", "Backpacks", "Suitcases & Trolleys", "Dufflebags", "Rucksacks", "Handbags", "Slingbags", "Women's Clutches & Wallets", "Messenger Bags", "Travel Accessories"],
+  "Kids": ["All", "Girls Dresses", "Boys & Girls Tshirts", "Boys & Girls Combosets", "Boys & Girls Ethnic Wear", "Boys & Girls Jeans", "Boys & Girls Shorts", "Boys & Girls Trackpants", "Boys & Girls Innerwear", "Infant Wear", "Kids Slipper Flip Flops", "Kids Sports Shoes"],
+  "Essentials": ["Men's Briefs & Trunks", "Men's Vests", "Men's Boxers", "Women Lingerie Sets", "Women Bra", "Women Panty", "Women Sarees", "Women Kurtas", "Women Kurta Sets & Salwar Suits", "Boys Innerwear", "Girls Innerwear", "Women Slipper Flip Flops"],
+  "Winter": ["All", "Men's Jackets", "Men's Sweatshirts", "Men's Sweaters", "Men's Thermals", "Women's Jackets", "Women's Sweatshirts", "Women's Sweaters & Cardigans", "Womne's Shrugs", "Kids SweatShirts", "Women Kurtas", "Kids Jackets"]
 };
 const electronics = {
   "Audio": [
@@ -113,7 +111,7 @@ const electronics = {
   "Computer Peripherals": ["All", "Women Sarees", "Women Kurtas & Kurtis"],
 };
 
-const cat = document.querySelectorAll(".category");
+const cat = document.querySelectorAll(".cat-list");
   for(let x of cat){
     x.addEventListener("mouseover", ()=>{
       const productKey = x.childNodes[3].childNodes[1].innerText;
@@ -144,6 +142,7 @@ const cat = document.querySelectorAll(".category");
           const h4 = document.createElement("h4");
           const key = i.childNodes[0].nodeValue;
           h4.innerText = `MORE IN ${key.toUpperCase()}`;
+          h4.classList.add("sub-cat-heading");
           subCat.append(h4);
           for (let j of arr[key]) {
             const li = document.createElement("li");
